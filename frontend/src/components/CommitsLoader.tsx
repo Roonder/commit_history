@@ -1,12 +1,13 @@
 import { useCommits } from "../hooks/useCommits";
 import CommitList from "./CommitsList";
+import Error from "./Error";
 import Loader from "./Loader";
 
 export default function CommitsLoader() {
-    const {commits, isLoading, isError } = useCommits();
+    const {commits, isError, isLoading } = useCommits();
 
     if(isLoading) return <Loader />;
-    if(isError) return <p>Hubo un error mi negro</p>;
+    if(isError) return <Error />;
 
     return <CommitList data={{commits}} />
 }
