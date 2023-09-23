@@ -1,5 +1,6 @@
 // import { useState } from 'react'
 import RepositoryInfoLoader from "./components/RepositoryInfoLoader"
+import CommitsLoader from "./components/CommitsLoader"
 
 function App() {
   
@@ -8,6 +9,7 @@ function App() {
   return (
     <>
       <RepositoryInfoLoader/>
+      <CommitsLoader/>
     </>
   )
 }
