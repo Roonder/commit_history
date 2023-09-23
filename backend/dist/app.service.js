@@ -14,9 +14,7 @@ const common_1 = require("@nestjs/common");
 const octokit_1 = require("octokit");
 let GithubService = class GithubService {
     constructor() {
-        this.octokit = new octokit_1.Octokit({
-            auth: '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',
-        });
+        this.octokit = new octokit_1.Octokit();
     }
     async getRepositories(owner, repo) {
         const response = await this.octokit.request(`GET /repos/{owner}/{repo}`, {

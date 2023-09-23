@@ -6,9 +6,7 @@ export class GithubService {
   private octokit: Octokit;
 
   constructor() {
-    this.octokit = new Octokit({
-      auth: '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',
-    });
+    this.octokit = new Octokit();
   }
 
   async getRepositories(owner: string, repo: string) {
